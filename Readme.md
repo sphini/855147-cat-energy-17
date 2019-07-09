@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Denis Skakalin](https://up.htmlacademy.ru/adaptive/17/user/855147).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Сорокин](https://htmlacademy.ru/profile/osorokin).
 
 ---
 
