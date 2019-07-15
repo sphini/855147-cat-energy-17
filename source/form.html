@@ -22,9 +22,90 @@
     <main class="page-form">
       <section class="selection">
         <h1 class="selection__title">Подбор программы</h1>
+        <p class="selection__title-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="selection__profile" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="selection__personal">
+            <h2 class="visually-hidden">Данные кота</h2>
+            <div class="selection__peronal-wrapper">
+              <label class="selection__text" for="selection__name">Имя:*</label>
+              <input class="selection__field" id="selection__name" name="cat-name" type="text" placeholder="Барсик">
+            </div>
+            <div class="selection__personal-wrapper">
+              <label class="selection__text" for="selection__weight">Вес (кг):*</label>
+              <input class="selection__field" id="selection__name" name="cat-weight" type="text" placeholder="7">
+            </div>
+            <div class="selection__personal-wrapper">
+              <label class="selection__text" for="selection__age">Возраст (лет):</label>
+              <input class="selection__field" id="selection__name" name="cat-age" type="text" placeholder="7">
+            </div>
+          </fieldset>
+          <fieldset class="selection__purpose">
+            <h2 class="visually-hidden">Цель обращения:</h2>
+            <ul class="selection__purpose-list">
+              <li class="selection__purpose-option">
+                <input class="selection__purpose-radio" type="radio" name="purpose" id="weight-loss" value="weight-loss">
+                <label  class="selection__text" for="weight-loss">Похудение</label>
+              </li>
+              <li class="selection__purpose-option">
+                <input class="selection__purpose-radio" type="radio" name="purpose" id="weight-gain" value="weight-gain">
+                <label  class="selection__text" for="weight-gain">Набор массы</label>
+              </li>
+              <li class="selection__purpose-option">
+                <input class="selection__purpose-radio" type="radio" name="purpose" id="unknown" value="unknown">
+                <label class="selection__text" for="unknown">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="selection__contacts">
+            <h2 class="selection__contacts-title">Контактные данные (Владельца кота)</h2>
+            <div class="selection__contacts-wrapper">
+              <label class="selection__text" for="contacts__email">E-mail:*</label>
+              <input class="contacts__field contacts__field--email" id="contacts__email" name="owner-email" type="text" placeholder="kuklachev@gmail.com">
+            </div>
+            <div class="selection__contacts-wrapper">
+              <label class="selection__text" for="contacts__phone">Телефон:*</label>
+              <input class="selection__field contacts__field--phone" id="contacts__phone" name="owner-phone" type="text" placeholder="8 (960) 900-60-90">
+            </div>
+          </fieldset>
+          <fieldset class="selection__comment">
+            <h2 class="selection__comment-title">Комментарий</h2>
+            <label class="visually-hidden" for="selection__comment-field">Текст комментария</label>
+            <textarea class="selection__comment-field" id="selection__comment-field" name="comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="selection__extra">
+            <h2 class="selection__extra">Дополнительно</h2>
+            <ul class="selection__extra-list">
+              <li class="selection__extra-option">
+                <input class="selection__extra-checkbox" type="checkbox" id="extra-sugar" name="sugar">
+                <label class="selection__text" for="sugar">Сахарозаменитель</label>
+              </li>
+              <li class="selection__extra-option">
+                <input class="selection__extra-checkbox" type="checkbox" id="extra-water" name="water">
+                <label class="selection__text" for="extra-water">Питьевая вода</label>
+              </li>
+              <li class="selection__extra-option">
+                <input class="selection__extra-checkbox" type="checkbox" id="extra-milk" name="milk">
+                <label class="selection__text" for="extra-milk">Молоко</label>
+              </li>
+              <li class="selection__extra-option">
+                <input class="selection__extra-checkbox" type="checkbox" id="extra-vitamins" name="milk">
+                <label class="selection__text" for="extra-vitamins">Витамины</label>
+              </li>
+            </ul>
+            <button type="button" class="selection__button button">Отправить заявку</button>
+            <p class="selection__note">*— Обязательные поля</p>
+          </fieldset>
+        </form>
       </section>
       <section class="invite">
-        <h2 class="visually-hidden">Контакты</h2>
+        <div class="invite__wrapper">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="invite__welcome-wrapper">
+            <b class="invite__welcome">Приглашаем к сотрудничеству дилеров</b>
+            <p class="invite__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <div class="invite__map"></div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
