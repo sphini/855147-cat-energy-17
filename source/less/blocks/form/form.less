@@ -1,0 +1,76 @@
+.form__purpose {
+  .clear-style();
+  border: none;
+  border-bottom: 1px solid @lightgray;
+  border-top: 1px solid @lightgray;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 20px;
+}
+
+.form__personal,
+.form__contacts,
+.form__extra,
+.form__comment {
+  border: none;
+  .clear-style();
+}
+
+.form__field,
+.form__comment-field {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid @bordergray;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.form__comment-field {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.form__purpose-list,
+.form__extra-list {
+  .clear-style();
+}
+
+.form__button {
+  margin-top: 35px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+}
+
+.form__note {
+  .clear-style();
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: none;
+  color: @gray;
+}
+
+.form__contacts-title,
+.form__comment-title,
+.form__extra-title {
+  .clear-style();
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: none;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.form__field::-webkit-input-placeholder,
+.form__comment-field::-webkit-input-placeholder {
+  color: @black;
+}
