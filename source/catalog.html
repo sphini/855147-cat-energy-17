@@ -8,23 +8,25 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo-wrapper">
-        <a class="page-header__logo-image" href="index.html"><img src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy"></a>
-        <a class="page-header__logo-name"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a>
+      <div class="page-header-wrapper">
+        <div class="page-header__logo-wrapper">
+          <a class="page-header__logo-image"><img src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy"></a>
+          <a class="page-header__logo-name"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a>
+        </div>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__site-list site-list">
+            <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
+            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__site-list site-list">
-          <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
-          <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
-        </ul>
-      </nav>
     </header>
     <main class="catalog-page">
       <section class="catalog-page__catalog catalog">
-        <h1 class="catalog__title">Каталог продукции</h1>
         <div class="catalog__wrapper">
+          <h1 class="catalog__title">Каталог продукции</h1>
           <ul class="catalog__list">
             <li class="catalog__item">
               <div class="catalog___item-wrapper">
@@ -236,19 +238,21 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__logo">
-        <a class="page-footer__logo-name"><img src="img/logo-footer.svg" width="128" height="24" alt="Надпись логотипа Cat energy"></a>
-      </div>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item"><a class="social__link social__link--vkontakte" href="#">Мы в вконтакте</a></li>
-          <li class="social__item"><a class="social__link social__link--instagram" href="#">Мы в инстаграме</a></li>
-          <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в фэйсбуке</a></li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <a class="copyright__text">HTML Academy</a>
-        <a class="copyright__logo"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy"></a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a class="page-footer__logo-name"><img src="img/logo-footer.svg" width="128" height="24" alt="Надпись логотипа Cat energy"></a>
+        </div>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item"><a class="social__link social__link--vkontakte" href="#">Мы в вконтакте</a></li>
+            <li class="social__item"><a class="social__link social__link--instagram" href="#">Мы в инстаграме</a></li>
+            <li class="social__item"><a class="social__link social__link--facebook" href="#">Мы в фэйсбуке</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <a class="copyright__text">HTML Academy</a>
+          <a class="copyright__logo"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HtmlAcademy"></a>
+        </div>
       </div>
     </footer>
   </body>
