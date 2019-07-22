@@ -1,5 +1,8 @@
-.howitworks {
+.howitworks__wrapper {
   padding: 0 20px;
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .howitworks__title {
@@ -30,4 +33,24 @@
 
 .howitworks__about {
   .clear-style();
+}
+
+@media (min-width: @tablet-width) {
+  .howitworks__wrapper {
+    width: 640px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  .howitworks__list {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .howitworks__wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }
