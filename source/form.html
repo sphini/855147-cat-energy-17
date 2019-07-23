@@ -25,90 +25,102 @@
     </header>
     <main class="page-form">
       <section class="selection">
-        <h1 class="selection__title">Подбор программы</h1>
-        <p class="selection__title-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <form class="selection__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__personal">
-            <h2 class="visually-hidden">Данные кота</h2>
+        <div class="selection__wrapper">
+          <h1 class="selection__title">Подбор программы</h1>
+          <p class="selection__title-text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+          <form class="selection__form form" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__personal-wrapper">
-              <label class="form__text" for="form__name">Имя:*</label>
-              <input class="form__field" id="form__name" name="cat-name" type="text" placeholder="Барсик">
+              <fieldset class="form__personal">
+                <h2 class="visually-hidden">Данные кота</h2>
+                <div class="form__personal-wrapper">
+                  <label class="form__text" for="form__name">Имя:*</label>
+                  <input class="form__field" id="form__name" name="cat-name" type="text" placeholder="Барсик">
+                </div>
+                <div class="form__personal-wrapper">
+                  <label class="form__text" for="form__weight">Вес (кг):*</label>
+                  <input class="form__field" id="form__weight" name="cat-weight" type="text" placeholder="7">
+                </div>
+                <div class="form__personal-wrapper">
+                  <label class="form__text" for="form__age">Возраст (лет):</label>
+                  <input class="form__field" id="form__age" name="cat-age" type="text" placeholder="7">
+                </div>
+              </fieldset>
+              <fieldset class="form__purpose">
+                <h2 class="visually-hidden">Цель обращения:</h2>
+                <ul class="form__purpose-list">
+                  <li class="form__purpose-option">
+                    <input class="form__purpose-radio" type="radio" name="purpose" id="weight-loss" value="weight-loss">
+                    <label class="form__text" for="weight-loss">Похудение</label>
+                  </li>
+                  <li class="form__purpose-option">
+                    <input class="form__purpose-radio" type="radio" name="purpose" id="weight-gain" value="weight-gain">
+                    <label class="form__text" for="weight-gain">Набор массы</label>
+                  </li>
+                  <li class="form__purpose-option">
+                    <input class="form__purpose-radio" type="radio" name="purpose" id="unknown" value="unknown">
+                    <label class="form__text" for="unknown">Не знаю (нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
-            <div class="form__personal-wrapper">
-              <label class="form__text" for="form__weight">Вес (кг):*</label>
-              <input class="form__field" id="form__weight" name="cat-weight" type="text" placeholder="7">
-            </div>
-            <div class="form__personal-wrapper">
-              <label class="form__text" for="form__age">Возраст (лет):</label>
-              <input class="form__field" id="form__age" name="cat-age" type="text" placeholder="7">
-            </div>
-          </fieldset>
-          <fieldset class="form__purpose">
-            <h2 class="visually-hidden">Цель обращения:</h2>
-            <ul class="form__purpose-list">
-              <li class="form__purpose-option">
-                <input class="form__purpose-radio" type="radio" name="purpose" id="weight-loss" value="weight-loss">
-                <label class="form__text" for="weight-loss">Похудение</label>
-              </li>
-              <li class="form__purpose-option">
-                <input class="form__purpose-radio" type="radio" name="purpose" id="weight-gain" value="weight-gain">
-                <label class="form__text" for="weight-gain">Набор массы</label>
-              </li>
-              <li class="form__purpose-option">
-                <input class="form__purpose-radio" type="radio" name="purpose" id="unknown" value="unknown">
-                <label class="form__text" for="unknown">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form__contacts">
-            <h2 class="form__contacts-title">Контактные данные (владельца кота)</h2>
-            <div class="form__contacts-wrapper">
-              <label class="form__text" for="contacts__email">E-mail:*</label>
-              <input class="form__field form__field--email" id="contacts__email" name="owner-email" type="text" placeholder="kuklachev@gmail.com">
-            </div>
-            <div class="form__contacts-wrapper">
-              <label class="form__text" for="contacts__phone">Телефон:*</label>
-              <input class="form__field form__field--phone" id="contacts__phone" name="owner-phone" type="text" placeholder="8 (960) 900-60-90">
-            </div>
-          </fieldset>
-          <fieldset class="form__comment">
-            <h2 class="form__comment-title">Комментарий</h2>
-            <label class="visually-hidden" for="comment">Текст комментария</label>
-            <textarea class="form__comment-field" id="comment" name="comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
-          </fieldset>
-          <fieldset class="form__extra">
-            <h2 class="form__extra-title">Дополнительно</h2>
-            <ul class="form__extra-list">
-              <li class="form__extra-option">
-                <input class="form__extra-checkbox" type="checkbox" id="extra-sugar" name="sugar">
-                <label class="form__text" for="extra-sugar">Сахарозаменитель</label>
-              </li>
-              <li class="form__extra-option">
-                <input class="form__extra-checkbox" type="checkbox" id="extra-water" name="water">
-                <label class="form__text" for="extra-water">Питьевая вода</label>
-              </li>
-              <li class="form__extra-option">
-                <input class="form__extra-checkbox" type="checkbox" id="extra-milk" name="milk">
-                <label class="form__text" for="extra-milk">Молоко</label>
-              </li>
-              <li class="form__extra-option">
-                <input class="form__extra-checkbox" type="checkbox" id="extra-vitamins" name="milk">
-                <label class="form__text" for="extra-vitamins">Витамины</label>
-              </li>
-            </ul>
-            <button type="button" class="form__button button">Отправить заявку</button>
-            <p class="form__note">*— Обязательные поля</p>
-          </fieldset>
-        </form>
+            <fieldset class="form__contacts">
+              <h2 class="form__contacts-title">Контактные данные (владельца кота)</h2>
+              <div class="form__contacts-wrapper">
+                <div class="form__contacts-field">
+                  <label class="form__text" for="contacts__email">E-mail:*</label>
+                  <input class="form__field form__field--email" id="contacts__email" name="owner-email" type="text" placeholder="kuklachev@gmail.com">
+                </div>
+                <div class="form__contacts-field">
+                  <label class="form__text" for="contacts__phone">Телефон:*</label>
+                  <input class="form__field form__field--phone" id="contacts__phone" name="owner-phone" type="text" placeholder="8 (960) 900-60-90">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="form__comment">
+              <h2 class="form__comment-title">Комментарий</h2>
+              <label class="visually-hidden" for="comment">Текст комментария</label>
+              <textarea class="form__comment-field" id="comment" name="comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+            <fieldset class="form__extra">
+              <h2 class="form__extra-title">Дополнительно</h2>
+              <ul class="form__extra-list">
+                <li class="form__extra-option">
+                  <input class="form__extra-checkbox" type="checkbox" id="extra-sugar" name="sugar">
+                  <label class="form__text" for="extra-sugar">Сахарозаменитель</label>
+                </li>
+                <li class="form__extra-option">
+                  <input class="form__extra-checkbox" type="checkbox" id="extra-water" name="water">
+                  <label class="form__text" for="extra-water">Питьевая вода</label>
+                </li>
+                <li class="form__extra-option">
+                  <input class="form__extra-checkbox" type="checkbox" id="extra-milk" name="milk">
+                  <label class="form__text" for="extra-milk">Молоко</label>
+                </li>
+                <li class="form__extra-option">
+                  <input class="form__extra-checkbox" type="checkbox" id="extra-vitamins" name="milk">
+                  <label class="form__text" for="extra-vitamins">Витамины</label>
+                </li>
+              </ul>
+              <div class="form__button-wrapper">
+                <button type="button" class="form__button button">Отправить заявку</button>
+                <p class="form__note">*— Обязательные поля</p>
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </section>
       <section class="invite">
-        <div class="invite__wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <b class="invite__welcome">Приглашаем к сотрудничеству дилеров!</b>
-          <p class="invite__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="invite__map">
-          <img class="invite__map-img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+        <div class="invite-wrapper">
+          <div class="invite__wrapper-text">
+            <h2 class="visually-hidden">Контакты</h2>
+            <b class="invite__welcome">Приглашаем к сотрудничеству дилеров!</b>
+            <p class="invite__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <div class="invite__map">
+            <img class="invite__map-img-mobile" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+            <img class="invite__map-img-tablet" src="img/bg-map-tablet@1x.png" width="640" height="auto" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+            <img class="invite__map-img-desktop" src="img/bg-map-desktop@1x.png" width="960" height="auto" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+          </div>
         </div>
       </section>
     </main>

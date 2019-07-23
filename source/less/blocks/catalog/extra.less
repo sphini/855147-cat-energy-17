@@ -42,3 +42,71 @@
 .extra__button {
   margin-bottom: 18px;
 }
+
+.extra__present-wrapper {
+  padding-top: 190px;
+  padding-bottom: 40px;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-color: @lightgreen;
+}
+
+.extra__present-text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: @white;
+
+  width: 160px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.extra__present {
+  margin-top: 37px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .extra__item {
+    border: 1px solid @bordergraydark;
+    border-bottom: none;
+    padding: 10px 30px;
+  }
+
+  .extra__item:last-child {
+    border-bottom: 1px solid @bordergraydark;
+  }
+
+  .extra__title {
+    border: none;
+  }
+
+  .extra__button {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .extra__present {
+    width: 300px;
+    margin-top: 0;
+  }
+
+  .extra__item {
+    display: flex;
+    border-left: none;
+    border-right: none;
+    justify-content: space-between;
+    padding: 10px 0;
+    align-items: center;
+    width: 550px;
+  }
+}
