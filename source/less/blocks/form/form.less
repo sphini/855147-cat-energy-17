@@ -74,3 +74,55 @@
 .form__comment-field::-webkit-input-placeholder {
   color: @black;
 }
+
+@media (min-width: @tablet-width) {
+  .form__extra-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__extra-option {
+    width: 200px;
+  }
+
+  .form__button-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .form__button {
+    width: 300px;
+  }
+
+  .form__note {
+    margin-left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__personal-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__purpose {
+    border: 1px solid @lightgray;
+    width: 400px;
+    margin: 0;
+  }
+
+  .form__personal {
+    width: 400px;
+  }
+
+  .form__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__contacts-field {
+    display: flex;
+    width: 420px;
+    align-items: center;
+  }
+}

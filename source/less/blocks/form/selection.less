@@ -1,3 +1,10 @@
+.selection__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 .selection__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
@@ -25,7 +32,23 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-bottom: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .selection__wrapper {
+    width: 640px;
+    padding: 0 30px;
+  }
+
+  .howitworks__list {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection__wrapper {
+    width: 960px;
+    padding: 0 40px;
+  }
 }
