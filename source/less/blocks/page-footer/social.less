@@ -1,3 +1,24 @@
+.social__icon {
+  fill: @icongray;
+
+  &:hover {
+    fill: @lightgreen;
+  }
+
+  &:active {
+    fill: @lightgreen;
+    opacity: 0.3;
+  }
+}
+
+
 .social__list {
   .clear-style();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  margin: 0 19px;
 }

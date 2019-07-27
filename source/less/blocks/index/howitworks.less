@@ -3,6 +3,7 @@
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
+  padding-bottom: 16px;
 }
 
 .howitworks__title {
@@ -12,6 +13,8 @@
   line-height: 60px;
   color: @black;
   .clear-style();
+
+  margin-bottom: 27px;
 }
 
 .howitworks__list {
@@ -24,33 +27,195 @@
   font-size: 14px;
   line-height: 18px;
   color: @gray;
-  margin-bottom: 20px;
+
+  margin-bottom: 26px;
+  padding-left: 80px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.howitworks__item:last-child {
-  margin-bottom: 40px;
+
+.howitworks__about::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: @lightgreen;
+}
+
+.howitworks__about--benefit::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  background-image: url(../img/advantage-leaf@1x.png);
+  background-size: contain;
+}
+
+.howitworks__about--powder::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  background-image: url(../img/advantage-powder@1x.png);
+  background-size: contain;
+}
+
+.howitworks__about--change::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  background-image: url(../img/advantage-dining@1x.png);
+  background-size: contain;
+}
+
+.howitworks__about--result::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  background-image: url(../img/advantage-clock@1x.png);
+  background-size: contain;
 }
 
 .howitworks__about {
   .clear-style();
 }
 
+
 @media (min-width: @tablet-width) {
   .howitworks__wrapper {
-    width: 640px;
+    width: 768px;
     margin: 0 auto;
     padding: 0 30px;
   }
 
+  .howitworks__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 70px;
+  }
+
   .howitworks__list {
     display: flex;
+    flex-wrap: wrap;
+    counter-reset: li;
   }
+
+  .howitworks__item {
+    padding: 0;
+    width: 46%;
+    padding-right: 80px;
+
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 8%;
+    padding-bottom: 104px;
+
+    &::after {
+      counter-increment: li;
+      content: counter(li) "";
+      position: absolute;
+      top: 93px;
+      left: 50%;
+      transform: translateX(-40%);
+      font-size: 281px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-weight: 400;
+      color: @lightgray;
+      z-index: -1;
+    }
+  }
+
+  .howitworks__about::before {
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 34px;
+  }
+
+  .howitworks__about::after {
+    top: 15px;
+    left: 15px;
+    transform: none;
+  }
+
+  .howitworks__about {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+
+}
+
+@media (min-width: @mobile-width-only) and (max-width: @tablet-width-only) {
+  .howitworks__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .howitworks__item:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  .howitworks__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .howitworks__wrapper {
+    border-bottom: 1px solid @bordergray;
+  }
+
 }
 
 @media (min-width: @desktop-width) {
   .howitworks__wrapper {
-    width: 960px;
+    width: 1440px;
     margin: 0 auto;
     padding: 0 40px;
   }
+
+  .howitworks__list {
+    padding: 0 30px;
+  }
+
+  .howitworks__title {
+    padding-left: 70px;
+    margin-bottom: 73px;
+  }
+
+  .howitworks__item {
+    padding: 0;
+    width: 245px;
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .howitworks__item::after {
+    right: 110px;
+  }
+
 }
