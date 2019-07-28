@@ -11,8 +11,8 @@
     <header class="page-header page-header--background">
       <div class="page-header-wrapper">
         <div class="page-header__logo-wrapper">
-          <a class="page-header__logo-image"><img src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy"></a>
-          <a class="page-header__logo-name"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a>
+          <a class="page-header__logo-image" href="#"><img src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy"></a>
+          <a class="page-header__logo-name" href="#"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a>
         </div>
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -164,8 +164,6 @@
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
-
-      // navMain.classList.remove('main-nav--nojs');
 
       navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--closed')) {
