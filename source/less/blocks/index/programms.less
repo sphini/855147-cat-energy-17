@@ -5,7 +5,6 @@
 .programms__wrapper {
   box-sizing: border-box;
   padding: 0 20px;
-  padding-top: 23px;
   width: 320px;
   margin: 0 auto;
 }
@@ -18,6 +17,46 @@
   line-height: 37px;
   color: @black;
   .clear-style();
+
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 30px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: @lightgreen;
+  }
+}
+
+.programms__item--slim .programms__title::after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 49px;
+  background-image: url("../img/icon-cat-slim.svg");
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 9px;
+}
+
+.programms__item--pro .programms__title::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 28px;
+  background-image: url("../img/icon-cat-pro.svg");
+  background-repeat: no-repeat;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -10px;
 }
 
 .programms__about {
@@ -27,6 +66,9 @@
   line-height: 18px;
   color: @gray;
   .clear-style();
+
+  padding-bottom: 22px;
+  border-bottom: 1px solid @bordergray;
 }
 
 .programms__link {
@@ -37,28 +79,129 @@
   line-height: 16px;
   color: @black;
   text-decoration: none;
+  display: inline-block;
+  margin-top: 16px;
+
+  &::after {
+    content: "";
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    margin-left: 11px;
+  }
+
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 35px;
+  }
+}
+
+.programms__link:active {
+  opacity: 0.3;
 }
 
 .programms__item {
   margin-bottom: 20px;
   background-color: @lightgray;
   padding: 20px;
+  padding-top: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: @mobile-width-only) and (max-width: @tablet-width-only) {
+  .programms__item--slim .programms__title::after {
+    width: 140px;
+    height: 194px;
+    background-size: contain;
+    top: 48%;
+    left: auto;
+    right: 90px;
+  }
+
+  .programms__item--pro .programms__title::after {
+    width: 268px;
+    height: 112px;
+    background-size: contain;
+    top: 51%;
+    left: auto;
+    right: 30px;
+  }
+
+  .programms__item {
+    position: relative;
+  }
+
+  .programms__title {
+    position: static;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 52%;
+      left: auto;
+      right: 60px;
+    }
+  }
+
+  .programms__about {
+    width: 63%;
+  }
+
+  .programms__item--pro .programms__about {
+    width: 57%;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .programms__wrapper {
-    width: 640px;
+    width: 768px;
     margin: 0 auto;
     padding: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  .programms__item {
+    padding: 75px 52px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+  }
+
+  .programms__title {
+    font-size: 36px;
+    line-height: 37px;
+    padding: 0;
+    margin-bottom: 28px;
+  }
+
+  .programms__about {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 0;
+    border: none;
+  }
+
+  .programms__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 32px;
+
+    &::after {
+      margin-left: 23px;
+      top: -2px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .programms__wrapper {
-    width: 960px;
+    width: 1300px;
     margin: 0 auto;
     padding: 0 40px;
-    padding-top: 80px;
+    margin-bottom: 43px;
   }
 
   .programms__list {
@@ -69,6 +212,43 @@
   .programms__item {
     display: block;
     box-sizing: border-box;
-    width: 430px;
+    padding: 78px 53px;
+    padding-bottom: 58px;
+    margin-right: 80px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  .programms__title {
+    padding-left: 162px;
+    margin-bottom: 73px;
+
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .programms__item--slim .programms__title::after {
+    width: 70px;
+    height: 97px;
+    background-size: contain;
+    left: 15px;
+    top: 15px;
+  }
+
+  .programms__item--pro .programms__title::after {
+    width: 134px;
+    height: 56px;
+    background-size: contain;
+    left: -18px;
+  }
+
+  .programms__link {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 10px;
   }
 }

@@ -8,10 +8,6 @@
   .clear-style();
 }
 
-.invite__wrapper {
-  position: relative;
-}
-
 .invite__text {
   font-family: "Arial", sans-serif;
   font-weight: 400;
@@ -20,7 +16,6 @@
   color: #444444;
   .clear-style();
 }
-
 
 .invite__wrapper-text {
   padding: 30px 20px;
@@ -70,6 +65,8 @@
     position: absolute;
     left: 0;
     top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
     background-color: @white;
   }
 
@@ -79,9 +76,10 @@
     overflow: hidden;
   }
 
-  .invite-wrapper {
+  .invite__wrapper {
     width: 960px;
     margin: 0 auto;
+    position: relative;
   }
 
   .invite__map-img-desktop {
