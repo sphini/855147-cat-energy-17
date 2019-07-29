@@ -21,18 +21,18 @@
   position: relative;
   padding-left: 70px;
   margin-bottom: 30px;
-}
 
-.programms__title::before {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  background-color: @lightgreen;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: @lightgreen;
+  }
 }
 
 .programms__item--slim .programms__title::after {
@@ -81,22 +81,22 @@
   text-decoration: none;
   display: inline-block;
   margin-top: 16px;
-}
 
-.programms__link::after {
-  content: "";
-  width: 24px;
-  height: 11px;
-  background-image: url("../img/icon-right-arrow-long.svg");
-  background-repeat: no-repeat;
-  position: relative;
-  display: inline-block;
-  margin-left: 11px;
-}
+  &::after {
+    content: "";
+    width: 24px;
+    height: 11px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    position: relative;
+    display: inline-block;
+    margin-left: 11px;
+  }
 
-.programms__link:hover::after {
-  background-image: url("../img/icon-right-arrow-verylong.svg");
-  width: 35px;
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 35px;
+  }
 }
 
 .programms__link:active {
@@ -113,14 +113,6 @@
 }
 
 @media (min-width: @mobile-width-only) and (max-width: @tablet-width-only) {
-  .programms__title::before {
-    width: 200px;
-    height: 200px;
-    top: 52%;
-    left: auto;
-    right: 60px;
-  }
-
   .programms__item--slim .programms__title::after {
     width: 140px;
     height: 194px;
@@ -145,6 +137,14 @@
 
   .programms__title {
     position: static;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 52%;
+      left: auto;
+      right: 60px;
+    }
   }
 
   .programms__about {
@@ -188,11 +188,11 @@
     font-size: 20px;
     line-height: 20px;
     margin-top: 32px;
-  }
 
-  .programms__link::after {
-    margin-left: 23px;
-    top: -2px;
+    &::after {
+      margin-left: 23px;
+      top: -2px;
+    }
   }
 }
 
@@ -224,11 +224,11 @@
   .programms__title {
     padding-left: 162px;
     margin-bottom: 73px;
-  }
 
-  .programms__title::before {
-    width: 100px;
-    height: 100px;
+    &::before {
+      width: 100px;
+      height: 100px;
+    }
   }
 
   .programms__item--slim .programms__title::after {

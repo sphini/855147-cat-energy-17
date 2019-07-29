@@ -37,7 +37,6 @@
   }
 }
 
-
 .howitworks__about::before {
   content: "";
   position: absolute;
@@ -49,56 +48,35 @@
   background-color: @lightgreen;
 }
 
+.howitworks__about {
+  .clear-style();
+
+  &::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 5px;
+    position: absolute;
+    transform: translateY(-50%);
+    background-size: contain;
+  }
+}
+
 .howitworks__about--benefit::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
   background-image: url("../img/advantage-leaf@1x.png");
-  background-size: contain;
 }
 
 .howitworks__about--powder::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
   background-image: url("../img/advantage-powder@1x.png");
-  background-size: contain;
 }
 
 .howitworks__about--change::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
   background-image: url("../img/advantage-dining@1x.png");
-  background-size: contain;
 }
 
 .howitworks__about--result::after {
-  content: "";
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
   background-image: url("../img/advantage-clock@1x.png");
-  background-size: contain;
-}
-
-.howitworks__about {
-  .clear-style();
 }
 
 
@@ -146,26 +124,26 @@
     }
   }
 
-  .howitworks__about::before {
-    position: relative;
-    display: block;
-    top: 0;
-    left: 0;
-    transform: none;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 34px;
-  }
-
-  .howitworks__about::after {
-    top: 15px;
-    left: 15px;
-    transform: none;
-  }
-
   .howitworks__about {
     font-size: 16px;
     line-height: 24px;
+
+    &::after {
+      top: 15px;
+      left: 15px;
+      transform: none;
+    }
+
+    &::before {
+      position: relative;
+      display: block;
+      top: 0;
+      left: 0;
+      transform: none;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 34px;
+    }
   }
 }
 
@@ -206,9 +184,9 @@
     &:nth-child(4n) {
       margin-right: 0;
     }
-  }
 
-  .howitworks__item::after {
-    right: 110px;
+    &::after {
+      right: 110px;
+    }
   }
 }
