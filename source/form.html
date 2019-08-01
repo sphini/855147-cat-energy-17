@@ -32,15 +32,15 @@
             <div class="form__personal-wrapper">
               <fieldset class="form__personal">
                 <h2 class="visually-hidden">Данные кота</h2>
-                <div class="form__personal-wrapper">
+                <div class="form__item-wrapper">
                   <label class="form__text" for="form__name">Имя:*</label>
                   <input class="form__field" id="form__name" name="cat-name" type="text" placeholder="Барсик">
                 </div>
-                <div class="form__personal-wrapper">
-                  <label class="form__text" for="form__weight">Вес (кг):*</label>
+                <div class="form__item-wrapper">
+                  <label class="form__text" for="form__weight"><span>Вес (кг):*</span></label>
                   <input class="form__field" id="form__weight" name="cat-weight" type="text" placeholder="7">
                 </div>
-                <div class="form__personal-wrapper">
+                <div class="form__item-wrapper">
                   <label class="form__text" for="form__age">Возраст (лет):</label>
                   <input class="form__field" id="form__age" name="cat-age" type="text" placeholder="7">
                 </div>
@@ -49,16 +49,16 @@
                 <h2 class="visually-hidden">Цель обращения:</h2>
                 <ul class="form__purpose-list">
                   <li class="form__purpose-option">
-                    <input class="form__purpose-radio" type="radio" name="purpose" id="weight-loss" value="weight-loss">
-                    <label class="form__text" for="weight-loss">Похудение</label>
+                    <input class="visually-hidden form__purpose-radio" type="radio" name="purpose" id="weight-loss" value="weight-loss" checked>
+                    <label class="form__text form__text-purpose" for="weight-loss">Похудение</label>
                   </li>
                   <li class="form__purpose-option">
-                    <input class="form__purpose-radio" type="radio" name="purpose" id="weight-gain" value="weight-gain">
-                    <label class="form__text" for="weight-gain">Набор массы</label>
+                    <input class="visually-hidden form__purpose-radio" type="radio" name="purpose" id="weight-gain" value="weight-gain">
+                    <label class="form__text form__text-purpose" for="weight-gain">Набор массы</label>
                   </li>
                   <li class="form__purpose-option">
-                    <input class="form__purpose-radio" type="radio" name="purpose" id="unknown" value="unknown">
-                    <label class="form__text" for="unknown">Не знаю (нужен ваш совет)</label>
+                    <input class="visually-hidden form__purpose-radio" type="radio" name="purpose" id="unknown" value="unknown">
+                    <label class="form__text form__text-purpose" for="unknown">Не знаю (нужен ваш совет)</label>
                   </li>
                 </ul>
               </fieldset>
@@ -66,11 +66,11 @@
             <fieldset class="form__contacts">
               <h2 class="form__contacts-title">Контактные данные (владельца кота)</h2>
               <div class="form__contacts-wrapper">
-                <div class="form__contacts-field">
+                <div class="form__item-wrapper form__contacts-field">
                   <label class="form__text" for="contacts__email">E-mail:*</label>
                   <input class="form__field form__field--email" id="contacts__email" name="owner-email" type="text" placeholder="kuklachev@gmail.com">
                 </div>
-                <div class="form__contacts-field">
+                <div class="form__item-wrapper form__contacts-field">
                   <label class="form__text" for="contacts__phone">Телефон:*</label>
                   <input class="form__field form__field--phone" id="contacts__phone" name="owner-phone" type="text" placeholder="8 (960) 900-60-90">
                 </div>
@@ -79,26 +79,26 @@
             <fieldset class="form__comment">
               <h2 class="form__comment-title">Комментарий</h2>
               <label class="visually-hidden" for="comment">Текст комментария</label>
-              <textarea class="form__comment-field" id="comment" name="comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+              <textarea class="form__comment-field" id="comment" name="comment" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <fieldset class="form__extra">
               <h2 class="form__extra-title">Дополнительно</h2>
               <ul class="form__extra-list">
                 <li class="form__extra-option">
-                  <input class="form__extra-checkbox" type="checkbox" id="extra-sugar" name="sugar">
-                  <label class="form__text" for="extra-sugar">Сахарозаменитель</label>
+                  <input class="form__extra-checkbox visually-hidden" type="checkbox" id="extra-sugar" name="sugar">
+                  <label class="form__text form-option-extra" for="extra-sugar">Сахарозаменитель</label>
                 </li>
                 <li class="form__extra-option">
-                  <input class="form__extra-checkbox" type="checkbox" id="extra-water" name="water">
-                  <label class="form__text" for="extra-water">Питьевая вода</label>
+                  <input class="form__extra-checkbox visually-hidden" type="checkbox" id="extra-water" name="water">
+                  <label class="form__text form-option-extra" for="extra-water">Питьевая вода</label>
                 </li>
                 <li class="form__extra-option">
-                  <input class="form__extra-checkbox" type="checkbox" id="extra-milk" name="milk">
-                  <label class="form__text" for="extra-milk">Молоко</label>
+                  <input class="form__extra-checkbox visually-hidden" type="checkbox" id="extra-milk" name="milk">
+                  <label class="form__text form-option-extra" for="extra-milk">Молоко</label>
                 </li>
                 <li class="form__extra-option">
-                  <input class="form__extra-checkbox" type="checkbox" id="extra-vitamins" name="milk">
-                  <label class="form__text" for="extra-vitamins">Витамины</label>
+                  <input class="form__extra-checkbox visually-hidden" type="checkbox" id="extra-vitamins" name="milk">
+                  <label class="form__text form-option-extra" for="extra-vitamins">Витамины</label>
                 </li>
               </ul>
               <div class="form__button-wrapper">

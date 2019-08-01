@@ -3,7 +3,7 @@
   box-sizing: border-box;
   width: 320px;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding-bottom: 46px;
 }
 
 .howitworks__title {
@@ -142,7 +142,7 @@
       transform: none;
       width: 80px;
       height: 80px;
-      margin-bottom: 34px;
+      margin-bottom: 35px;
     }
   }
 }
@@ -166,14 +166,22 @@
 }
 
 @media (min-width: @desktop-width) {
+.howitworks {
+  padding-bottom: 40px;
+}
+
   .howitworks__wrapper {
     width: 1300px;
     margin: 0 auto;
     padding: 0 40px;
   }
 
+  .howitworks__about::before {
+    margin-bottom: 30px;
+  }
+
   .howitworks__title {
-    margin-bottom: 73px;
+    margin-bottom: 72px;
   }
 
   .howitworks__item {
@@ -188,5 +196,9 @@
     &::after {
       right: 110px;
     }
+  }
+
+  .howitworks__list {
+    margin-bottom: 30px;
   }
 }
