@@ -51,7 +51,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0px;
+  bottom: 0;
   width: 320px;
   height: 400px;
   z-index: -1;
@@ -70,12 +70,15 @@
   background-repeat: no-repeat;
 }
 
+.invite--form {
+  position: relative;
+  z-index: -10;
+  background-color: @lightgray;
+}
+
 @media (min-width: @tablet-width) {
   .invite__wrapper-text {
     width: 768px;
-  }
-
-  .invite__wrapper-text {
     padding: 62px 30px 60px 30px;
     display: flex;
     justify-content: space-between;
@@ -120,18 +123,20 @@
     height: 106px;
     top: 150px;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .invite__wrapper-text {
-    width: 450px;
-    padding: 0 40px;
     position: absolute;
     left: 110px;
     top: 95px;
     z-index: 10;
     background-color: @white;
+    padding-left: 37px;
+    padding-top: 65px;
+    padding-bottom: 55px;
+    padding-right: 45px;
+    width: 570px;
   }
 
   .invite__map {
@@ -143,17 +148,12 @@
     height: auto;
   }
 
-  .invite__wrapper-text {
-    padding-left: 37px;
-    padding-top: 65px;
-    padding-bottom: 55px;
-    padding-right: 45px;
-    width: 570px;
-  }
-
   .invite__map::after {
     left: auto;
-    right: 20px;
+    right: 260px;
+    top: 155px;
+    height: 115px;
+    width: 120px;
   }
 
   .invite__text {
