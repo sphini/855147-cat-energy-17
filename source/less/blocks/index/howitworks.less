@@ -37,17 +37,6 @@
   }
 }
 
-.howitworks__about::before {
-  content: "";
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  background-color: @lightgreen;
-}
-
 .howitworks__about {
   .clear-style();
 
@@ -60,6 +49,17 @@
     position: absolute;
     transform: translateY(-50%);
     background-size: contain;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: @lightgreen;
   }
 }
 

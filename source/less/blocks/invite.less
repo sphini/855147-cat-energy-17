@@ -45,6 +45,19 @@
   position: relative;
   height: 364px;
   overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 58px;
+    height: 55px;
+    background-image: url("../img/map-pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 .invite__map-img {
@@ -55,19 +68,6 @@
   width: 320px;
   height: 400px;
   z-index: -1;
-}
-
-.invite__map::after {
-  content: "";
-  position: absolute;
-  top: 140px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 58px;
-  height: 55px;
-  background-image: url("../img/map-pin.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .invite--form {
@@ -141,19 +141,19 @@
 
   .invite__map {
     height: 400px;
+
+    &::after {
+      left: auto;
+      right: 260px;
+      top: 155px;
+      height: 115px;
+      width: 120px;
+    }
   }
 
   .invite__map-img {
     width: 1440px;
     height: auto;
-  }
-
-  .invite__map::after {
-    left: auto;
-    right: 260px;
-    top: 155px;
-    height: 115px;
-    width: 120px;
   }
 
   .invite__text {
