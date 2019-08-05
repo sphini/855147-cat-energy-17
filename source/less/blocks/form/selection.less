@@ -2,6 +2,7 @@
   width: 320px;
   margin: 0 auto;
   padding: 0 20px;
+  padding-top: 17px;
   box-sizing: border-box;
 }
 
@@ -12,7 +13,8 @@
   line-height: 60px;
   .clear-style();
   color: @black;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+
   text-transform: none;
 }
 
@@ -22,7 +24,8 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
+  padding-right: 20px;
 }
 
 .selection {
@@ -32,13 +35,37 @@
   line-height: 18px;
   text-transform: uppercase;
   padding-bottom: 35px;
-  padding-top: 20px;
+  overflow-x: hidden;
 }
 
 @media (min-width: @tablet-width) {
   .selection__wrapper {
-    width: 640px;
+    width: 768px;
     padding: 0 30px;
+    padding-top: 55px;
+  }
+
+  .selection__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 55px;
+  }
+
+  .selection {
+    padding-bottom: 55px;
+  }
+
+  .selection__title-text {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 40px;
+    padding-right: 300px;
+    margin-bottom: 65px;
+  }
+
+  .selection__form {
+    padding-left: 42px;
+    padding-right: 38px;
   }
 
   .howitworks__list {
@@ -48,7 +75,22 @@
 
 @media (min-width: @desktop-width) {
   .selection__wrapper {
-    width: 960px;
+    width: 1300px;
     padding: 0 40px;
+    padding-top: 72px;
+  }
+
+  .selection__title-text {
+    padding-left: 0;
+    padding-right: 850px;
+  }
+
+  .selection__form {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .selection {
+    padding-bottom: 64px;
   }
 }

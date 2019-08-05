@@ -116,6 +116,7 @@
 
   .catalog__list {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 
@@ -130,6 +131,11 @@
 
     &:nth-child(2n) {
       margin-right: 0;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 37px;
     }
   }
 
@@ -277,6 +283,13 @@
 
     &:nth-child(4n) {
       margin-right: 0;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(4) {
+      margin-bottom: 47px;
     }
   }
 

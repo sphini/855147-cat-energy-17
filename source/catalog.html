@@ -214,38 +214,50 @@
         </div>
       </section>
       <section class="catalog-page__extra extra">
-        <h2 class="extra__title">Дополнительные товары</h2>
+        <div class="extra__title-wrapper">
+          <div class="extra__title-centering">
+            <h2 class="extra__title">Дополнительные товары</h2>
+          </div>
+        </div>
         <div class="extra__wrapper">
           <ul class="extra__list">
             <li class="extra__item">
-              <h3 class="extra__item-name">Сахарозаменитель</h3>
-              <div class="extra__price-wrapper">
-                <span class="extra__feature">1 упаковка (100 г)</span>
-                <span class="extra__price">100 р.</span>
+              <div class="extra__item-name-wrapper">
+                <h3 class="extra__item-name">Сахарозаменитель</h3>
+                <div class="extra__price-wrapper">
+                  <span class="extra__feature">1 упаковка (100 г)</span>
+                  <span class="extra__price">100 р.</span>
+                </div>
               </div>
               <a class="extra__button button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
-              <h3 class="extra__item-name">Питьевая вода</h3>
-              <div class="extra__price-wrapper">
-                <span class="extra__feature">5 литров</span>
-                <span class="extra__price">50 р.</span>
+              <div class="extra__item-name-wrapper">
+                <h3 class="extra__item-name">Питьевая вода</h3>
+                <div class="extra__price-wrapper">
+                  <span class="extra__feature">5 литров</span>
+                  <span class="extra__price">50 р.</span>
+                </div>
               </div>
               <a class="extra__button button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
-              <h3 class="extra__item-name">Молоко</h3>
-              <div class="extra__price-wrapper">
-                <span class="extra__feature">1 литр</span>
-                <span class="extra__price">100 р.</span>
+              <div class="extra__item-name-wrapper">
+                <h3 class="extra__item-name">Молоко</h3>
+                <div class="extra__price-wrapper">
+                  <span class="extra__feature">1 литр</span>
+                  <span class="extra__price">100 р.</span>
+                </div>
               </div>
               <a class="extra__button button" href="#">Заказать</a>
             </li>
             <li class="extra__item">
-              <h3 class="extra__item-name">Витамины</h3>
-              <div class="extra__price-wrapper">
-                <span class="extra__feature">1 упаковка (30 г)</span>
-                <span class="extra__price">300 р.</span>
+              <div class="extra__item-name-wrapper">
+                <h3 class="extra__item-name">Витамины</h3>
+                <div class="extra__price-wrapper">
+                  <span class="extra__feature">1 упаковка (30 г)</span>
+                  <span class="extra__price">300 р.</span>
+                </div>
               </div>
               <a class="extra__button button" href="#">Заказать</a>
             </li>
@@ -253,22 +265,25 @@
           <div class="extra__present">
             <div class="extra__present-wrapper">
               <h2 class="visually-hidden">Бонусы</h2>
-              <p class="extra__present-text">Закажите все и получите чехол для кота в подарок!</p>
+              <p class="extra__present-text">Закажите все <br> и получите чехол для кота в подарок!</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="invite">
+      <section class="invite invite--form">
         <div class="invite__wrapper">
           <div class="invite__wrapper-text">
             <h2 class="visually-hidden">Контакты</h2>
-            <b class="invite__welcome">Приглашаем к сотрудничеству дилеров!</b>
-            <p class="invite__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <b class="invite__welcome">Приглашаем <br> к сотрудничеству дилеров!</b>
+            <p class="invite__text">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></p>
           </div>
           <div class="invite__map">
-            <img class="invite__map-img-mobile" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
-            <img class="invite__map-img-tablet" src="img/bg-map-tablet@1x.png" width="640" height="auto" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
-            <img class="invite__map-img-desktop" src="img/bg-map-desktop@1x.png" width="960" height="auto" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+            <!-- <iframe class="invite__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1560679350647!5m2!1sru!2sru" width="100%" height="100%" allowfullscreen></iframe> -->
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+              <img class="invite__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
+            </picture>
           </div>
         </div>
       </section>
