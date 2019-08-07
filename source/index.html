@@ -11,8 +11,17 @@
     <header class="page-header page-header--background">
       <div class="page-header-wrapper">
         <div class="page-header__logo-wrapper">
-          <a class="page-header__logo-image" href="#"><img src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy"></a>
-          <a class="page-header__logo-name" href="#"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a>
+          <a class="page-header__logo-image" href="#">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="page-header__logo-svg" src="img/logo-mobile-image.svg" width="33" height="38" alt="Логотип Cat energy">
+            </picture>
+          </a>
+          <a class="page-header__logo-name" href="#">
+            <img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy">
+          </a>
+          <!-- <a class="page-header__logo-name" href="#"><img src="img/logo-mobile-text.svg" width="101" height="18" alt="Надпись логотипа Cat energy"></a> -->
         </div>
         <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -34,10 +43,15 @@
           <div class="main-block__button-wrapper">
             <a class="main-block__button button" href="#">Подобрать программу</a>
           </div>
-          <div class="main-block__product-image">
-            <img class="main-block__product-image--mobile" src="img/index-can-mobile@1x.png" alt="Фото продукта Cat energy">
+          <div class="main-block__product-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="main-block__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Изображение кота до">
+            </picture>
+            <!-- <img class="main-block__product-image--mobile" src="img/index-can-mobile@1x.png" alt="Фото продукта Cat energy">
             <img class="main-block__product-image--tablet" src="img/index-can-tablet@1x.jpg" alt="Фото продукта Cat energy">
-            <img class="main-block__product-image--desktop" src="img/index-can-desktop@1x.png" alt="Фото продукта Cat energy">
+            <img class="main-block__product-image--desktop" src="img/index-can-desktop@1x.png" alt="Фото продукта Cat energy"> -->
           </div>
         </div>
       </section>
@@ -78,50 +92,49 @@
         </div>
       </section>
       <section class="example">
-        <!-- <div class="example__title-wrapper"> -->
-          <div class="example__wrapper">
-            <div class="example__info-wrapper">
-              <h2 class="example__title">Живой пример</h2>
-              <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-              <ul class="example__list">
-                <li class="example__item">
-                  <span class="example__total">5 кг</span>
-                  <div class="example__sign-container">
-                    <span class="example__sign">Снижение веса</span>
-                  </div>
-                </li>
-                <li class="example__item">
-                  <span class="example__total">60 дней</span>
-                  <div class="example__sign-container">
-                    <span class="example__sign">Затрачено времени</span>
-                  </div>
-                </li>
-                <li class="example__item">
-                  <p class="example__sum">Затраты на питание: <span>15 000 руб.</span></p>
-                </li>
-              </ul>
-            </div>
-            <div class="example__cat-wrapper">
-              <div class="example__cat">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="example__cat-img example__cat-img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до">
-                </picture>
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="example__cat-img example__cat-img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кота после">
-                </picture>
-              </div>
-              <div class="example__compare-panel">
-                <button class="example__button example__button--was">Было</button>
-                <div class="example__cat-range">
-                  <div class="example__cat-indicator"></div>
+        <div class="example__wrapper">
+          <div class="example__info-wrapper">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <ul class="example__list">
+              <li class="example__item">
+                <span class="example__total">5 кг</span>
+                <div class="example__sign-container">
+                  <span class="example__sign">Снижение веса</span>
                 </div>
-                <button class="example__button example__button--become">Стало</button>
-              </div>
+              </li>
+              <li class="example__item">
+                <span class="example__total">60 дней</span>
+                <div class="example__sign-container">
+                  <span class="example__sign">Затрачено времени</span>
+                </div>
+              </li>
+              <li class="example__item">
+                <p class="example__sum">Затраты на питание: <span>15 000 руб.</span></p>
+              </li>
+            </ul>
+          </div>
+          <div class="example__cat-wrapper">
+            <div class="example__cat">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="example__cat-img example__cat-img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кота до">
+              </picture>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example__cat-img example__cat-img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кота после">
+              </picture>
             </div>
+            <div class="example__compare-panel">
+              <button class="example__button example__button--was">Было</button>
+              <div class="example__cat-range">
+                <div class="example__cat-indicator"></div>
+              </div>
+              <button class="example__button example__button--become">Стало</button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="invite">
@@ -134,7 +147,7 @@
           <div class="invite__map">
             <!-- <iframe class="invite__map-google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1560679350647!5m2!1sru!2sru" width="100%" height="100%" allowfullscreen></iframe> -->
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+              <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
               <img class="invite__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="улица Большая Конюшенная, д. 19/8 Санкт-Петербург на карте">
             </picture>
