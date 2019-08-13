@@ -12,7 +12,6 @@
 
 .form__purpose-option {
   margin-bottom: 25px;
-
   padding-left: 45px;
 }
 
@@ -121,12 +120,17 @@
 }
 
 .form__field-personal {
-  padding-left: 18px;
+  padding-left: 16px;
+}
+
+.form__contacts-field .form__text {
+  margin-right: 9px;
 }
 
 .form__field--email,
-.form__field---phone {
+.form__field--phone {
   padding-right: 35px;
+  padding-left: 15px;
 }
 
 .form__contacts-field {
@@ -135,23 +139,54 @@
 
 .form__email-icon {
   position: absolute;
-  right: 15px;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .form__phone-icon {
   position: absolute;
   right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .form__field--email:focus ~ .form__email-icon,
-.form__field---phone:focus ~ .form__phone-icon {
+.form__field--phone:focus ~ .form__phone-icon {
   fill: @lightgreen;
 }
 
 .form__field:focus,
 .form__comment-field:focus {
-  outline: 0;
-  border: 2px solid @black;
+  outline: 2px solid @black;
+}
+
+.form__field:active,
+.form__text-purpose:active::before,
+.form__text-extra:active::before,
+.form__text-purpose:active::after,
+.form__text-extra:active::after,
+.form__text-purpose:active,
+.form__text-extra:active,
+.form__comment-field:active{
+  opacity: 0.5;
+}
+
+.form__field:hover,
+.form__text-purpose:hover::before,
+.form__text-extra:hover::before,
+.form__comment-field:hover {
+  border: 1px solid @graybutton;
+}
+
+.form__field--email:invalid,
+.form__field--phone:invalid {
+  outline: 2px solid red;
+}
+
+.form__field--email:invalid ~ .form__email-icon,
+.form__field--phone:invalid ~ .form__phone-icon {
+  fill: red;
 }
 
 .form__comment-field {
@@ -170,7 +205,7 @@
 .form__button {
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   border: none;
   width: 100%;
 }
@@ -350,7 +385,7 @@
     line-height: 36px;
     margin: 0;
     margin-bottom: 77px;
-    margin-left: -40px;
+    margin-left: -42px;
 
     padding: 0;
     padding-left: 40px;
@@ -374,6 +409,10 @@
     margin-top: -10px;
   }
 
+  .form__field-personal {
+    padding-left: 17px;
+  }
+
   .form__extra {
     margin-top: -15px;
   }
@@ -385,6 +424,18 @@
 
   .form__extra-title {
     margin-bottom: 58px;
+  }
+
+  .form__contacts-field .form__text {
+    margin-right: 18px;
+  }
+
+  .form__contacts-field:nth-child(2) {
+    margin-left: -3px;
+  }
+
+  .form__field--phone {
+    padding-left: 15px;
   }
 }
 

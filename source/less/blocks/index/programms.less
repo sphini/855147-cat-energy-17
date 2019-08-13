@@ -7,6 +7,7 @@
   padding: 0 20px;
   width: 320px;
   margin: 0 auto;
+  padding-bottom: 17px;
 }
 
 .programms__title {
@@ -19,8 +20,8 @@
   .clear-style();
 
   position: relative;
-  padding-left: 70px;
-  margin-bottom: 30px;
+  padding-left: 72px;
+  margin-bottom: 29px;
 
   &::before {
     content: "";
@@ -30,7 +31,7 @@
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
+    left: 2px;
     background-color: @lightgreen;
   }
 }
@@ -38,12 +39,12 @@
 .programms__item--slim .programms__title::after {
   content: "";
   position: absolute;
-  width: 35px;
-  height: 49px;
+  width: 36px;
+  height: 51px;
   background-image: url("../img/icon-cat-slim.svg");
   background-repeat: no-repeat;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 52%;
+  transform: translateY(-52%);
   left: 9px;
 }
 
@@ -56,7 +57,7 @@
   background-repeat: no-repeat;
   top: 50%;
   transform: translateY(-50%);
-  left: -10px;
+  left: -7px;
 }
 
 .programms__about {
@@ -80,7 +81,7 @@
   color: @black;
   text-decoration: none;
   display: inline-block;
-  margin-top: 16px;
+  padding-top: 18px;
 
   &::after {
     content: "";
@@ -107,9 +108,13 @@
   margin-bottom: 20px;
   background-color: @lightgray;
   padding: 20px;
-  padding-top: 32px;
+  padding-top: 30px;
   width: 100%;
   box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: @mobile-width-only) and (max-width: @tablet-width-only) {
@@ -117,7 +122,7 @@
     width: 140px;
     height: 194px;
     background-size: contain;
-    top: 48%;
+    top: 180px;
     left: auto;
     right: 90px;
   }
@@ -126,9 +131,9 @@
     width: 268px;
     height: 112px;
     background-size: contain;
-    top: 51%;
+    top: 189px;
     left: auto;
-    right: 30px;
+    right: 29px;
   }
 
   .programms__item {
@@ -141,7 +146,7 @@
     &::before {
       width: 200px;
       height: 200px;
-      top: 52%;
+      top: 190px;
       left: auto;
       right: 60px;
     }
@@ -174,7 +179,7 @@
     font-size: 36px;
     line-height: 37px;
     padding: 0;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .programms__about {
@@ -187,7 +192,7 @@
   .programms__link {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 32px;
+    padding-top: 34px;
 
     &::after {
       margin-left: 23px;
@@ -212,9 +217,10 @@
   .programms__item {
     display: block;
     box-sizing: border-box;
-    padding: 78px 53px;
+    padding: 75px 53px;
     padding-bottom: 58px;
     margin-right: 80px;
+    margin-bottom: 0;
 
     &:nth-child(2n) {
       margin-right: 0;
@@ -228,6 +234,8 @@
     &::before {
       width: 100px;
       height: 100px;
+      top: 20px;
+      left: 0;
     }
   }
 
@@ -244,11 +252,12 @@
     height: 56px;
     background-size: contain;
     left: -18px;
+    top: 20px;
   }
 
   .programms__link {
     font-size: 20px;
     line-height: 20px;
-    margin-top: 10px;
+    padding-top: 10px;
   }
 }
